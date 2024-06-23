@@ -24,17 +24,23 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install Node.js Environment
-        uses: actions/setup-node@v3
+     - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: npm
+          cache: 'pnpm'
 
       - name: Install Project Dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Build
-        run: npm run build
+        run: pnpm run build
 
       - name: Upload File To Sever
         uses: wangyucode/sftp-upload-action@v2.0.2
