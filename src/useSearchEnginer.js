@@ -66,7 +66,7 @@ export const searchEnginers = [
 export const storage = window.localStorage;
 export const storageKey = "__search_eniger_storage_key__";
 
-export const openInSelf = (url) => window.open(url, "self");
+export const openInSelf = (url) => window.open(url, "_self");
 export const openInNewTab = (url) => window.open(url, "_blank");
 
 export function useSearchEnginer() {
