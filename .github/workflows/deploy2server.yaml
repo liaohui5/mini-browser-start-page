@@ -36,12 +36,12 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Upload file to server
-          uses: wangyucode/sftp-upload-action@v2
-          with:
-            host: ${{ secrets.SERVER_IP }}
-            port: ${{ secrets.SERVER_PORT }}
-            username: ${{ secrets.SERVER_USER }}
-            password: ${{ secrets.SERVER_PASS }}
-            localDir: "dist"
-            remoteDir: ${{ secrets.SERVER_TARGET_PATH }}
+      - name: Upload File To Sever
+        uses: wangyucode/sftp-upload-action@v2
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          port: ${{ secrets.SERVER_PORT }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASS }}
+          localDir: "dist"
+          remoteDir: ${{ secrets.SERVER_TARGET_PATH }}
