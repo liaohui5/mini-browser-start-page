@@ -10,9 +10,9 @@ export default defineConfig({
       "@": "/src",
     },
   },
-  server: {
-    watch: {
-      usePolling: true,
-    },
-  },
+  // server: {
+  //   watch: {
+  //     usePolling: true,
+  //   },
+  // },
 });

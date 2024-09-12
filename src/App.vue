@@ -1,15 +1,19 @@
 <template>
   <img
-    class="refresh-bg w-10 fixed right-12 top-12"
+    class="refresh-bg w-10 fixed right-12 top-12 transition-transform duration-1000"
     src="https://infinityicon.infinitynewtab.com/assets/windmill.svg"
-    @click="refreshBgImage"
+    ref="refreshBgRef"
+    @click="handleSwitchBg"
   />
   <div
     class="container flex items-center h-12 mt-32 bg-white rounded relative opacity-85 w-3/4 lg:w-1/3"
   >
-    <div class="enginer-icon w-12 h-12" @click="toggleEnginerVisible">
+    <div
+      class="enginer-icon w-12 h-12 flex items-center justify-center"
+      @click="toggleEnginerVisible"
+    >
       <img
-        class="p-3 box-border hover:cursor-pointer"
+        class="h-1/2 box-border hover:cursor-pointer"
         :src="enginer.icon_url"
       />
     </div>
@@ -47,6 +51,7 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import { searchEnginers, useSearchEnginer } from "./useSearchEnginer.js";
 import { useBg } from "./useBg.js";
 
@@ -59,4 +64,15 @@ const {
   changeSearchEnginer,
 } = useSearchEnginer();
 const { refreshBgImage } = useBg();
+
+const refreshBgRef = ref(null);
+let index = 1;
+function handleSwitchBg() {
+  if (refreshBgRef.value) {
+    const deg = index * 360;
+    refreshBgRef.value.style.transform = `rotate(${deg}deg)`;
+    index += 1;
+  }
+  refreshBgImage();
+}
 </script>
