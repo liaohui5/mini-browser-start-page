@@ -1,67 +1,97 @@
 import { ref } from "vue";
+import baiduIcon from "@/assets/icons/baidu.svg";
+import duckDuckGoIcon from "@/assets/icons/duckduckgo.svg";
+import googleIcon from "@/assets/icons/google.svg";
+import sogouIcon from "@/assets/icons/sogou.svg";
+import bingIcon from "@/assets/icons/bing.svg";
+import githubIcon from "@/assets/icons/github.svg";
+import mdnIcon from "@/assets/icons/mdn.svg";
+import npmIcon from "@/assets/icons/npm.svg";
+import cargoIcon from "@/assets/icons/cargo.svg";
+import dockerhubIcon from "@/assets/icons/docker.svg";
+import bilibiliIcon from "@/assets/icons/bilibili.svg";
+import youtubeIcon from "@/assets/icons/youtube.svg";
+import googleFyIcon from "@/assets/icons/google-translate.svg";
+import yahooIcon from "@/assets/icons/yahoo.svg";
+import _360Icon from "@/assets/icons/360.svg";
 
 export const searchEnginers = [
   {
-    "title": "百度",
-    "icon_url": "https://www.jianfast.com/static/home/images/searchChoice/baidu.svg",
-    "search_url": "https://www.baidu.com/s?wd="
+    "name": "谷歌",
+    "icon": googleIcon,
+    "search_url": "https://google.com/search?q="
   },
   {
-    "title": "Google",
-    "icon_url": "https://www.jianfast.com/static/home/images/searchChoice/google.svg",
-    "search_url": "https://www.google.com/search?q="
-  },
-  {
-    "title": "必应",
-    "icon_url": "https://www.jianfast.com/static/home/images/searchChoice/bing.svg",
+    "name": "必应",
+    "icon": bingIcon,
     "search_url": "https://cn.bing.com/search?q="
   },
   {
-    "title": "搜狗",
-    "icon_url": "https://www.jianfast.com/static/home/images/searchChoice/sogou.svg",
+    "name": "DuckDuckGo",
+    "icon": duckDuckGoIcon,
+    "search_url": "https://duckduckgo.com/?q="
+  },
+  {
+    "name": "雅虎",
+    "icon": yahooIcon,
+    "search_url": "https://search.yahoo.com/search?p="
+  },
+  {
+    "name": "搜狗",
+    "icon": sogouIcon,
     "search_url": "https://www.sogou.com/web?query="
   },
   {
-    "title": "京东商城",
-    "icon_url": "https://www.jianfast.com/static/home/images/searchChoice/jd.svg",
-    "search_url": "https://union-click.jd.com/jdc?type=union&p=JF8BAGoKGloQXAIBUF5fOE8nAl8JKx9KBVhdDxxtUQ5SQmQWBR1TGxlZAUEPVhcnAToLGQwSXQEHUl1cDU1DVD9dHAgTWFVQBApVXEIUV2c4RB9IADYCVV9cDE0VBW8LK2sVXDYyZG5tOEonM184&t=W1dCFBBFC0RUQUpADgpQTFs=&e=&tu=http%3A%2F%2Fsearch.jd.com%2FSearch%3Fkeyword%3D"
+    "name": "百度",
+    "icon": baiduIcon,
+    "search_url": "https://kaifa.baidu.com/searchPage?wd="
   },
   {
-    "title": "搜优惠券",
-    "icon_url": "https://www.jianfast.com/static/home/images/searchChoice/youhui.svg",
-    "search_url": "http://www.somelemon.com/index.php?r=l&kw="
+    "name": "360搜索",
+    "icon": _360Icon,
+    "search_url": "https://www.so.com/s?q="
   },
   {
-    "title": "网易云音乐",
-    "icon_url": "https://www.jianfast.com/static/home/images/searchChoice/wangyimusic.svg",
-    "search_url": "https://music.163.com/#/search/m/?s="
+    "name": "GitHub",
+    "icon": githubIcon,
+    "search_url": "https://github.com/search?type=repositories&q="
   },
   {
-    "title": "腾讯视频",
-    "icon_url": "https://www.jianfast.com/static/home/images/searchChoice/qqvideo.svg",
-    "search_url": "https://v.qq.com/x/search/?q="
+    "name": "MDN",
+    "icon": mdnIcon,
+    "search_url": "https://developer.mozilla.org/zh-CN/search?q="
   },
   {
-    "title": "知乎",
-    "icon_url": "https://www.jianfast.com/static/home/images/searchChoice/zhihu.svg",
-    "search_url": "https://www.zhihu.com/search?type=content&q="
+    "name": "npm",
+    "icon": npmIcon,
+    "search_url": "https://www.npmjs.com/search?q="
   },
   {
-    "title": "Bilibili",
-    "icon_url": "https://www.jianfast.com/static/home/images/searchChoice/bilibili.svg",
+    "name": "cargo",
+    "icon": cargoIcon,
+    "search_url": "https://crates.io/search?q="
+  },
+  {
+    "name": "DockerHub",
+    "icon": dockerhubIcon,
+    "search_url": "https://hub.docker.com/search?q="
+  },
+  {
+    "name": "BiliBili",
+    "icon": bilibiliIcon,
     "search_url": "https://search.bilibili.com/all?keyword="
   },
   {
-    "title": "微博",
-    "icon_url": "https://www.jianfast.com/static/home/images/searchChoice/weibo.svg",
-    "search_url": "https://s.weibo.com/weibo?q="
+    "name": "YouTube",
+    "icon": youtubeIcon,
+    "search_url": "https://www.youtube.com/results?search_query="
   },
   {
-    "title": "中英互译",
-    "icon_url": "https://www.jianfast.com/static/home/images/searchChoice/baidufanyi.svg",
-    "search_url": "https://fanyi.baidu.com/#auto/en/"
-  }
-]
+    "name": "谷歌翻译",
+    "icon": googleFyIcon,
+    "search_url": "https://translate.google.com/?hl=zh-cn&sl=auto&tl=zh-CN&op=translate&text="
+  },
+];
 
 export const storage = window.localStorage;
 export const storageKey = "__search_eniger_storage_key__";
