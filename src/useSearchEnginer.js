@@ -6,9 +6,6 @@ import sogouIcon from "@/assets/icons/sogou.svg";
 import bingIcon from "@/assets/icons/bing.svg";
 import githubIcon from "@/assets/icons/github.svg";
 import mdnIcon from "@/assets/icons/mdn.svg";
-import npmIcon from "@/assets/icons/npm.svg";
-import cargoIcon from "@/assets/icons/cargo.svg";
-import dockerhubIcon from "@/assets/icons/docker.svg";
 import bilibiliIcon from "@/assets/icons/bilibili.svg";
 import youtubeIcon from "@/assets/icons/youtube.svg";
 import googleFyIcon from "@/assets/icons/google-translate.svg";
@@ -27,7 +24,7 @@ export const searchEnginers = [
     "search_url": "https://cn.bing.com/search?q="
   },
   {
-    "name": "DuckDuckGo",
+    "name": "鸭鸭",
     "icon": duckDuckGoIcon,
     "search_url": "https://duckduckgo.com/?q="
   },
@@ -47,7 +44,7 @@ export const searchEnginers = [
     "search_url": "https://kaifa.baidu.com/searchPage?wd="
   },
   {
-    "name": "360搜索",
+    "name": "360",
     "icon": _360Icon,
     "search_url": "https://www.so.com/s?q="
   },
@@ -62,22 +59,7 @@ export const searchEnginers = [
     "search_url": "https://developer.mozilla.org/zh-CN/search?q="
   },
   {
-    "name": "npm",
-    "icon": npmIcon,
-    "search_url": "https://www.npmjs.com/search?q="
-  },
-  {
-    "name": "cargo",
-    "icon": cargoIcon,
-    "search_url": "https://crates.io/search?q="
-  },
-  {
-    "name": "DockerHub",
-    "icon": dockerhubIcon,
-    "search_url": "https://hub.docker.com/search?q="
-  },
-  {
-    "name": "BiliBili",
+    "name": "bilibili",
     "icon": bilibiliIcon,
     "search_url": "https://search.bilibili.com/all?keyword="
   },
@@ -87,7 +69,7 @@ export const searchEnginers = [
     "search_url": "https://www.youtube.com/results?search_query="
   },
   {
-    "name": "谷歌翻译",
+    "name": "翻译",
     "icon": googleFyIcon,
     "search_url": "https://translate.google.com/?hl=zh-cn&sl=auto&tl=zh-CN&op=translate&text="
   },

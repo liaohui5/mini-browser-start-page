@@ -1,7 +1,7 @@
 <template>
   <!-- windmill icon -->
-  <img class="w-10 fixed right-12 top-12 transition-transform duration-1000" :src="windmillIcon" ref="refreshBgRef"
-    @click="handleSwitchBg" />
+  <img class="w-10 fixed right-12 top-12 transition-transform duration-1000 hover:cursor-pointer" :src="windmillIcon"
+    ref="refreshBgRef" @click="handleSwitchBg" />
 
   <!-- main content -->
   <div class="container flex items-center h-12 mt-32 bg-white rounded relative opacity-85 w-3/4 lg:w-1/3">
