@@ -14,64 +14,64 @@ import _360Icon from "@/assets/icons/360.svg";
 
 export const searchEnginers = [
   {
-    "name": "谷歌",
-    "icon": googleIcon,
-    "search_url": "https://google.com/search?q="
+    name: "谷歌",
+    icon: googleIcon,
+    search_url: "https://google.com/search?q=",
   },
   {
-    "name": "必应",
-    "icon": bingIcon,
-    "search_url": "https://cn.bing.com/search?q="
+    name: "必应",
+    icon: bingIcon,
+    search_url: "https://cn.bing.com/search?q=",
   },
   {
-    "name": "鸭鸭",
-    "icon": duckDuckGoIcon,
-    "search_url": "https://duckduckgo.com/?q="
+    name: "鸭鸭",
+    icon: duckDuckGoIcon,
+    search_url: "https://duckduckgo.com/?q=",
   },
   {
-    "name": "雅虎",
-    "icon": yahooIcon,
-    "search_url": "https://search.yahoo.com/search?p="
+    name: "雅虎",
+    icon: yahooIcon,
+    search_url: "https://search.yahoo.com/search?p=",
   },
   {
-    "name": "搜狗",
-    "icon": sogouIcon,
-    "search_url": "https://www.sogou.com/web?query="
+    name: "搜狗",
+    icon: sogouIcon,
+    search_url: "https://www.sogou.com/web?query=",
   },
   {
-    "name": "百度",
-    "icon": baiduIcon,
-    "search_url": "https://kaifa.baidu.com/searchPage?wd="
+    name: "百度",
+    icon: baiduIcon,
+    search_url: "https://kaifa.baidu.com/searchPage?wd=",
   },
   {
-    "name": "360",
-    "icon": _360Icon,
-    "search_url": "https://www.so.com/s?q="
+    name: "360",
+    icon: _360Icon,
+    search_url: "https://www.so.com/s?q=",
   },
   {
-    "name": "GitHub",
-    "icon": githubIcon,
-    "search_url": "https://github.com/search?type=repositories&q="
+    name: "GitHub",
+    icon: githubIcon,
+    search_url: "https://github.com/search?type=repositories&q=",
   },
   {
-    "name": "MDN",
-    "icon": mdnIcon,
-    "search_url": "https://developer.mozilla.org/zh-CN/search?q="
+    name: "MDN",
+    icon: mdnIcon,
+    search_url: "https://developer.mozilla.org/zh-CN/search?q=",
   },
   {
-    "name": "bilibili",
-    "icon": bilibiliIcon,
-    "search_url": "https://search.bilibili.com/all?keyword="
+    name: "bilibili",
+    icon: bilibiliIcon,
+    search_url: "https://search.bilibili.com/all?keyword=",
   },
   {
-    "name": "YouTube",
-    "icon": youtubeIcon,
-    "search_url": "https://www.youtube.com/results?search_query="
+    name: "YouTube",
+    icon: youtubeIcon,
+    search_url: "https://www.youtube.com/results?search_query=",
   },
   {
-    "name": "翻译",
-    "icon": googleFyIcon,
-    "search_url": "https://translate.google.com/?hl=zh-cn&sl=auto&tl=zh-CN&op=translate&text="
+    name: "翻译",
+    icon: googleFyIcon,
+    search_url: "https://translate.google.com/?hl=zh-cn&sl=auto&tl=zh-CN&op=translate&text=",
   },
 ];
 
@@ -109,7 +109,7 @@ export function useSearchEnginer() {
   }
 
   const keyword = ref("");
-  const search = () => openInSelf(enginer.value.search_url += keyword.value);
+  const search = () => openInSelf((enginer.value.search_url += keyword.value));
 
   return {
     keyword,
@@ -117,6 +117,6 @@ export function useSearchEnginer() {
     enginerVisible,
     toggleEnginerVisible,
     changeSearchEnginer,
-    search
-  }
+    search,
+  };
 }
